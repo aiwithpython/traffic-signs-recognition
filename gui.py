@@ -1,3 +1,17 @@
+#####################################################################################################################
+# Now we are going to build a graphical user interface for our traffic signs classifier with Tkinter.               #
+# Tkinter is a GUI toolkit in the standard python library. Make a new file in the project folder and                #
+# copy the below code. Save it as gui.py and you can run the code by typing python gui.py in the command line.      #
+#                                                                                                                   #
+# In this file, we have first loaded the trained model ‘traffic_classifier.h5’ using Keras.                         #
+# And then we build the GUI for uploading the image and a button is used to classify which calls                    #
+# the classify() function. The classify() function is converting the image into the dimension of                    #
+# shape (1, 30, 30, 3). This is because to predict the traffic sign we have to provide the same                     #
+# dimension we have used when building the model. Then we predict the class, the model.predict_classes(image)       #
+# returns us a number between (0-42) which represents the class it belongs to. We use the dictionary to get         #
+# the information about the class. Here’s the code for the gui.py file.                                             #
+#####################################################################################################################
+
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import *
